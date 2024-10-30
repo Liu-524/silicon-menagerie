@@ -7,7 +7,6 @@ setup(
     author="Emin Orhan",
     description="Model definition and utilities from silicon-menagerie",
     packages=find_packages(),
-    py_modules=["saycam_utils"],
     python_requires=">=3.9",
     license="MIT",
     zip_safe=True,

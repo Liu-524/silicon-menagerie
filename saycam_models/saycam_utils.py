@@ -78,7 +78,7 @@ def load_dino_mugs(model, pretrained_weights, checkpoint_key):
         print("There is no reference weights available for this model => We use random weights.")
 
 def build_dino_mugs(arch, patch_size):
-    import vision_transformer_dino_mugs as vits
+    from . import vision_transformer_dino_mugs as vits
     from torchvision import models as torchvision_models
 
     # if the network is a Vision Transformer (i.e. vit_tiny, vit_small, vit_base, vit_large)
@@ -95,7 +95,7 @@ def build_dino_mugs(arch, patch_size):
     return model
 
 def build_mae(arch, patch_size):
-    import vision_transformer_mae as vits
+    from . import vision_transformer_mae as vits
     full_model_name = arch + "_patch" + str(patch_size)
     model = vits.__dict__[full_model_name](num_classes=0, global_pool=False)
 

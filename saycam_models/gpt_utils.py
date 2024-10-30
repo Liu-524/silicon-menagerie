@@ -2,9 +2,9 @@ import random
 import numpy as np
 import torch
 import yaml
-import gptmodel
+from . import gptmodel
 from omegaconf import OmegaConf
-from vqmodel import VQModel, GumbelVQ
+from .vqmodel import VQModel, GumbelVQ
 from huggingface_hub import hf_hub_download
 
 
